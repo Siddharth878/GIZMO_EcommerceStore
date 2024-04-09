@@ -1,0 +1,959 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+:root {
+  --text-color: rgb(14,14,14);
+  /* --white: #ffffff; */
+}
+
+
+
+
+
+
+/* 
+  
+
+  font-family: "Open sans";
+  font-color:  rgb(14,14,14);
+  font(gray) : rgb(187,187,187) , #666
+
+
+  border-radius -> 2rem, 5rem he
+
+
+  other colors -> from coolors -> #c7d6d5 (ash gray)
+                               -> #cb0115 (Engineerng orange)
+
+*/
+*{
+   
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+
+}
+*:focus{
+  outline:none;
+}
+
+html
+{
+  
+  font-size: 62.5%;
+}
+
+body{
+  
+  color:var(--text-color);
+  font-family: "Quicksand";
+  overflow-x: hidden;
+}
+
+input,
+input::placeholder {
+    font-size: 1.6rem;
+    color:var(--text-color);
+    text-align: center;
+}
+
+
+
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+select
+{
+    font-size:1.6rem;
+}
+
+ion-icon{
+  visibility: visible !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Hero{
+  background-image: url('IMG/iphone2.jpg');
+  background-size: cover;
+
+  width: 100%;
+
+}
+.category-img{
+  /* background-image: url('IMG/category-Audio.png');
+  background-size: cover; */
+
+  width: 100%;
+}
+
+
+
+
+
+.swiper ,
+.swiper-wrapper{
+  overflow: visible !important;
+}
+.swiper-button-prev
+,.swiper-button-next
+{
+  
+  padding:4.4rem !important;
+  color: #666 !important;
+  background-color:rgba(119, 119, 119, 0.041);
+  border-radius: 50%;
+  transition:all 0.3s;
+
+  
+}
+
+.swiper-button-prev:hover
+,.swiper-button-next:hover{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+.ion--icon{
+  
+  display: block;
+  background-color:#666 ;
+
+  height: 4.4rem !important;
+  width: 4.4rem !important;
+}
+
+/* .swiper-button-next{
+  height: 1rem !important;
+  width: auto;
+  padding:3.2rem !important;
+  color: var(--text-color) !important;
+  background-color:rosybrown;
+  border-radius: 50%;
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* About us Card */
+.about-us-card{
+  background-image: url('./IMG/airwire.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+code {
+  
+} */
+
+
+.quantity--box input{
+  font-size: 2.4rem !important;
+}
+.productDetails .add-to-cart{
+  font-size: 1.8rem !important;
+}
+
+.add-to-cart:hover,
+.sumbit-review:hover{
+  border:solid 1px var(--text-color);
+
+}
+.add-to-cart,
+.sumbit-review{
+
+   transition: all 0.15s;
+}
+
+
+.review--Card{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Shop all page */
+.shop--back{
+ 
+  background-image: url('IMG/shop-img.jpg');
+  background-size: cover;
+
+  width: 100%;
+  
+}
+
+
+
+/*  Go throught the following css again */
+.arrows {
+
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
+}
+
+.arrows path {
+  stroke: #2994D1;
+  fill: transparent;
+  stroke-width: 1px;  
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+  animation-delay:-1s;
+  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 { 
+  animation-delay:0s;
+  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+
+
+
+
+
+.category-shop-btn{
+    
+  transition: all 0.3s;
+}
+.category-shop-btn:hover{
+  
+  color:var(--text-color);
+  transition: all 0.3s;
+}
+
+
+
+.social-Links{
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.social-Links:hover{
+  color: rgb(187,187,187);
+}
+
+
+
+
+
+
+
+
+
+/* Pagination */
+.currentPage{
+  font-weight:600;
+}
+.disabled--page{
+  color:rgb(187,187,187);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Price Filter please check for better animation */
+@keyframes Out {
+  from {
+   transform: translateY(0);
+  }
+  
+  to {
+    transform: translateY(-100%);
+    display: none;
+  }
+}
+
+.filter--box{
+  
+  /* visibility: hidden; 
+  
+  opacity: 0;
+  display: none;
+  
+  
+  
+  transform:translateY(-100%);
+  transition: all ease-out 0.3s; */
+
+  display: none
+
+  
+}
+
+
+
+
+@keyframes slideIn {
+  from {
+    display: none;
+    transform: translateY(-100%);
+  }
+  
+  to {
+    display: block;
+    transform: translateY(0);
+  }
+}
+
+
+.visibleBox{
+  
+ 
+  animation-name :slideIn;
+  animation-duration: 1s;
+}
+
+
+
+.news-card{
+
+  background-image:url("./IMG/Argous77.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Login signup component */
+.login-signup--container{
+   background-image: url('./IMG/LoginSignUp.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.update--profile--conatiner{
+  background-image: url('./IMG/UpdateProfile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.update--pass--conatiner{
+  background-image: url('./IMG/ChangePassword.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.login--main{
+  
+  /* From https://css.glass */
+
+ /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border: 1px solid rgba(255, 255, 255, 0.25);  
+}
+
+.display--form{
+  background-color: #fbfbfb;
+  color:var(--text-color);
+}
+
+
+
+.login--sign-btn-container{
+   
+  transition: all 0.3s;
+}
+/* .show{
+  opacity: 1;
+}
+.display--prop {
+   
+  display: none;
+  opacity: 0;
+  transition: opacity 0.6s linear;
+} */
+
+
+.login--form,
+.signupForm{
+  transition: all 0.5s;
+}
+
+
+.signupForm{
+  transform: translateY(-100%) translateX(-100vmax);
+  /* display: none; */
+  opacity:0;
+}
+
+/* .shiftToRight{
+   transform: translateX(100%);
+   
+} */
+.shiftToLeft{
+  transform: translateX(-100%);
+  opacity: 0;
+}
+/* .shiftToNeutral{
+  transform: translate(0);
+  opacity: 1;
+} */
+.shiftToNeutralForm{
+  transform: translate(0%) translateY(-100%);
+  opacity:1;
+}
+
+
+#registerImage > img{
+  
+  border-radius:5rem;
+
+}
+#registerImage > input{
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap:2.4rem; */
+
+
+  padding:0;
+}
+#registerImage > input::file-selector-button{
+
+
+
+  cursor: pointer;
+  width:100%;
+  height:auto;
+  font-size: 1.6rem;
+  border-radius: 5rem;
+  z-index: 1;
+  margin: 0;
+  
+  border: none;
+  background-color: #cb0115;
+  transition: all 0.3s;
+}
+
+#registerImage > input::file-selector-button:hover{
+
+   background-color: #c7d6d5 ;
+}
+
+
+
+
+
+
+#updateProfileImage > img{
+  
+  border-radius:5rem;
+
+}
+#updateProfileImage > input{
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap:2.4rem; */
+
+
+  padding:0;
+}
+#updateProfileImage > input::file-selector-button{
+
+
+
+  cursor: pointer;
+  width:100%;
+  height:auto;
+  font-size: 1.6rem;
+  border-radius: 5rem;
+  z-index: 1;
+  margin: 0;
+  
+  border: none;
+  background-color: #cb0115;
+  transition: all 0.3s;
+}
+
+#updateProfileImage > input::file-selector-button:hover{
+
+   background-color: #c7d6d5 ;
+}
+
+.update--profile--main{
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border: 1px solid rgba(255, 255, 255, 0.25);  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* account */
+
+.account-info-container img,
+.options
+{
+  transition: all 0.3s;
+}
+
+.account-info-container img:hover{
+
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 25px 50px -12px;
+  transform: translate(100%);
+}
+
+.edit--profile{
+  transition: 0.3s;
+}
+.edit--profile:hover{
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+
+.options:hover{
+  transform:scale(1.04);
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 25px 50px -12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Feature Icons and styles */
+/* .feature-icon{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #cart */
+
+
+
+
+
+.linksReactNavbar {
+  font-family: 'Quicksand' !important;
+  font-size: 2.4rem !important;
+}
+.menuBurger {
+  width: 4vmax !important;
+  height: 4vmax !important;
+}
+
+.nav1{
+  justify-content: center  ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SLide nav */
+
+.slide-nav--btn {
+  transition: all 0.3s;
+}
+
+
+
+
+/* Shipping - Stepper */
+
+
+
+.MuiStepConnector-line{
+  border-top-width: 2px !important;
+}
+.Mui-active
+.Mui-completed{
+  color:var(--text-color) !important;
+}
+.Mui-disabled{
+  color:rgb(187,187,187) !important;
+}
+.MuiStepLabel-label {
+  font-size: 2.0rem !important;
+  font-family: "Quicksand" !important;
+  /* color:var(--text-color) !important; */
+}
+
+
+/* Shipping input container */
+
+
+select,
+.shipping-input-cont input{
+   
+  height: 4.4rem;
+  border-radius: 5rem;
+  width:450px;
+
+  text-align: center;
+  text-align-last: center;
+ 
+}
+.shipping-input-cont ion-icon{
+   
+
+  color:var(--text-color);
+  height: 2.4rem;
+  width:2.4rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* My Orders */
+
+
+.MuiDataGrid-main{
+  width:1280px;
+  font-family: 'Quicksand';
+  font-size: 2.0rem;
+  border-radius: 5rem !important;
+  padding:0 2.4rem !important;
+
+}
+.MuiTablePagination-caption {
+  font-size: 2.0rem !important;
+}
+.MuiTablePagination-actions button,
+.MuiTablePagination-actions span,
+.MuiTablePagination-actions svg{
+  height: 3.2rem;
+  width: 3.2rem;
+  color:#555 !important;
+}
+.MuiTablePagination-actions button:hover{
+  cursor: pointer;
+}
+/* .MuiDataGrid-cell{
+  max-width: 0 !important;
+  min-width: 0 !important; 
+} */
+.MuiDataGrid-columnHeaderWrapper{
+  
+  justify-content: space-evenly !important;
+} 
+/* */
+/* .MuiDataGrid-cell{
+  display: none !important;
+} */
+/* 
+.MuiButtonBase-root{
+  height: 5.4rem;
+  width: 5.4rem;
+}
+.MuiSvgIcon-root{
+  cursor: pointer !important;
+  font-size: 2.4rem !important;
+}
+.MuiDataGrid-columnHeader--sortable{
+  width:300px !important;
+
+}
+.MuiDataGrid-columnHeaderDraggableContainer{
+  width:inherit !important;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Review */
+
+.MuiDialog-paper {
+  height: 450px;
+  min-width: 800px;
+
+  border-radius: 5rem !important;
+}
+.MuiRating-root label,
+.MuiRating-root span,
+.MuiRating-root svg{
+  height: 3.2rem;
+  width: 3.2rem;
+}
+.MuiTypography-h6{
+  font-family: 'Quicksand' !important;
+  color: var(--text-color) !important;
+  font-weight:400 !important;
+  font-size: 2.4rem !important;
+}
+.MuiDialogTitle-root{
+  display: flex;
+  justify-content: center !important;
+  padding-top:3.2rem !important;
+}
+.MuiDialogContent-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1.6rem;
+}
+
+.MuiDialogContent-root textarea
+{
+
+  font-size: 1.6rem;
+  border-radius: 5px;
+}
+.MuiButtonBase-root{
+
+  width: 200px;
+  font-family: 'Quicksand' !important;
+  font-size: 1.6rem !important;
+  color: var(--text-color) !important;
+  border-radius: 5rem !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.about-us-card-internal{
+  background-image: url('./IMG/frenchdispatch.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about-us-card-internal div{
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
