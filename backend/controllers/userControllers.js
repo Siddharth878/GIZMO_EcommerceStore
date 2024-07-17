@@ -14,7 +14,7 @@ const createSendToken = (user,statusCode,res)=>{
     
 
     const options = {
-        expires:"2d"
+        expires:"2d",
         httpOnly:true
     };
 
