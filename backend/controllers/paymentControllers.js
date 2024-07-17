@@ -1,7 +1,7 @@
 
 
 const catchAsyncErrors = require('../middlewares/catchAsyncErrors');
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')('sk_test_51OaO5fSA2MkXqf1KmDy0RWshVqX1cyJAavXSv1qx73PJxUpwavS9uzLU36lbUmrFoWpD7F3ReMdV3EJQiSRZ6QIy00NgDz3bGn');
 
 
 
@@ -38,6 +38,6 @@ exports.processPayment = catchAsyncErrors(async(req,res,next) =>{
 
 // For sending the key to frontend
 exports.sendStripeApiKey = catchAsyncErrors (async(req,res,next)=>{
-    res.status(200).json({stripeApiKey:process.env.STRIPE_API_KEY});
+    res.status(200).json({stripeApiKey:pk_test_51OaO5fSA2MkXqf1K8eK0rC9pUYyzTrru70uSR4kiF4JZSNVifRJSm4WSLAmEQZKOw9pyn550ex7flx0rSwPKp7Eb00qAIKCoaW});
 
 })
