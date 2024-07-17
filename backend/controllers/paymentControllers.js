@@ -5,9 +5,10 @@ const stripe = require('stripe')('sk_test_51OaO5fSA2MkXqf1KmDy0RWshVqX1cyJAavXSv
 
 
 
-
 exports.processPayment = catchAsyncErrors(async(req,res,next) =>{
    
+
+   console.log(stripe);
    
       
     
